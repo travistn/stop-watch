@@ -10,11 +10,11 @@ body {
 
 h1,
 h2 {
-  font-size: 20px;
+  font-size: 40px;
 }
 
 button {
-  font-size: 14px;
+  font-size: 26px;
   padding: .5rem;
   border: .2rem solid;
 }
