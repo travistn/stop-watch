@@ -34,3 +34,7 @@ $button.addEventListener('click', function () {
   $button.classList.toggle('is-clicked')
   $reset.classList.toggle('is-hidden')
 })
+
+$reset.addEventListener('click', function () {
+  $reset.classList.toggle('is-visible')
+})
