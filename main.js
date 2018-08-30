@@ -4,6 +4,7 @@ var $reset = document.getElementById('reset')
 
 var seconds = 0
 var intervalId = -1
+var currentTimer = 0
 
 $button.addEventListener('click', function update () {
   if (intervalId === -1) {
@@ -17,9 +18,17 @@ $button.addEventListener('click', function update () {
   }
 })
 
-$reset.addEventListener('click', function () {
+$reset.addEventListener('click', resetTimer)
+
+function stopTimer () {
   clearInterval(intervalId)
-})
+}
+
+function resetTimer () {
+  stopTimer()
+  currentTimer = 0
+  $time.textContent = currentTimer
+}
 
 $button.addEventListener('click', function () {
   $button.classList.toggle('is-clicked')

@@ -50,3 +50,7 @@ button:hover {
   visibility: visible;
   display: inline;
 }
+
+.reset.is-visible {
+  display: none;
+}
