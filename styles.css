@@ -20,22 +20,37 @@ h2 {
 button {
   font-size: 50px;
   border: .3rem solid;
-  background-color: lightsalmon
+  background-color: lightsalmon;
+  margin: 1rem;
 }
 
 button:hover {
   cursor: pointer;
 }
 
-button::before {
+.start::before {
   content: 'Start';
 }
 
-button.is-clicked::before {
+.start.is-clicked::before {
   content: none;
 }
 
-button.is-clicked::after {
+.start.is-clicked::after {
   content: 'Pause';
   background-color: white;
+}
+
+.reset {
+  display: none;
+  background-color: white;
+}
+
+.reset.is-hidden {
+  visibility: visible;
+  display: inline;
+}
+
+.reset.is-visible {
+  display: none;
 }
