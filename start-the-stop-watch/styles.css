@@ -1,0 +1,29 @@
+* {
+  color: black;
+  background-color: white;
+}
+
+body {
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 70px;
+}
+
+button {
+  font-size: 26px;
+  padding: .5rem;
+  border: .2rem solid;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: salmon
+}
