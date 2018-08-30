@@ -54,3 +54,21 @@ button:hover {
 .reset.is-visible {
   display: none;
 }
+
+div {
+  letter-spacing: .1rem;
+  margin: 5rem;
+}
+
+.timeLimit {
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+.limitBox {
+  width: 2rem;
+  height: 2rem;
+  font-size: 20px;
+  color: red;
+  font-weight: bold;
+}
