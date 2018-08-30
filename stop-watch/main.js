@@ -15,3 +15,7 @@ $button.addEventListener('click', function update () {
     intervalId = -1
   }
 })
+
+$button.addEventListener('click', function () {
+  $button.classList.toggle('is-clicked')
+})

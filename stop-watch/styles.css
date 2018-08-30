@@ -18,12 +18,27 @@ h2 {
 }
 
 button {
-  font-size: 26px;
-  padding: .5rem;
-  border: .2rem solid;
+  font-size: 60px;
+  padding: .2rem;
+  border: none;
 }
 
 button:hover {
   cursor: pointer;
-  background-color: salmon
+}
+
+button::before {
+  content: '▶️'
+}
+
+button::after {
+  content: none;
+}
+
+button.is-clicked::before {
+  content: none;
+}
+
+button.is-clicked::after {
+  content: '⏸'
 }
