@@ -17,10 +17,11 @@ $button.addEventListener('click', function update () {
   }
 })
 
-$button.addEventListener('click', function () {
-  $button.classList.toggle('is-clicked')
+$reset.addEventListener('click', function () {
+  clearInterval(intervalId)
 })
 
 $button.addEventListener('click', function () {
+  $button.classList.toggle('is-clicked')
   $reset.classList.toggle('is-hidden')
 })

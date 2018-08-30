@@ -43,6 +43,7 @@ button:hover {
 
 .reset {
   display: none;
+  background-color: white;
 }
 
 .reset.is-hidden {
