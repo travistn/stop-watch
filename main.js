@@ -1,5 +1,6 @@
 var $button = document.getElementById('button')
 var $time = document.getElementById('time')
+var $reset = document.getElementById('reset')
 
 var seconds = 0
 var intervalId = -1
