@@ -4,9 +4,8 @@ var $time = document.getElementById('time')
 var seconds = 0
 
 $button.addEventListener('click', function update () {
-  if (seconds >= 0) {
-    seconds += 1
+    setInterval(function () {
+    seconds ++
     $time.textContent = seconds
-  }
-  setInterval(update, 1000)
+  }, 1000)
 })
