@@ -20,3 +20,7 @@ $button.addEventListener('click', function update () {
 $button.addEventListener('click', function () {
   $button.classList.toggle('is-clicked')
 })
+
+$button.addEventListener('click', function () {
+  $reset.classList.toggle('is-hidden')
+})

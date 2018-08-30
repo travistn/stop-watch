@@ -42,5 +42,10 @@ button:hover {
 }
 
 .reset {
-  visibility: hidden;
+  display: none;
+}
+
+.reset.is-hidden {
+  visibility: visible;
+  display: inline;
 }
