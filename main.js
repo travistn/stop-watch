@@ -1,24 +1,35 @@
 var $button = document.getElementById('button')
 var $time = document.getElementById('time')
 var $reset = document.getElementById('reset')
+var $limit = document.getElementById('limitBox')
 
 var seconds = 0
 var intervalId = -1
-var currentTimer = 0
 
-$button.addEventListener('click', function update () {
+$button.addEventListener('click', function () {
+  start()
+  $reset.classList.toggle('is-hidden')
+  tick()
+})
+
+$reset.addEventListener('click', function () {
+  resetTimer()
+  $reset.classList.toggle('is-visible')
+})
+
+function start () {
   if (intervalId === -1) {
+    $button.textContent = "Pause"
     intervalId = setInterval(function () {
     seconds ++
     $time.textContent = seconds
     }, 1000)
   } else {
+    $button.textContent = "Start"
     clearInterval(intervalId)
     intervalId = -1
   }
-})
-
-$reset.addEventListener('click', resetTimer)
+}
 
 function stopTimer () {
   clearInterval(intervalId)
@@ -26,15 +37,13 @@ function stopTimer () {
 
 function resetTimer () {
   stopTimer()
-  currentTimer = 0
-  $time.textContent = currentTimer
+  seconds = 0
+  $time.textContent = seconds
 }
 
-$button.addEventListener('click', function () {
-  $button.classList.toggle('is-clicked')
-  $reset.classList.toggle('is-hidden')
-})
-
-$reset.addEventListener('click', function () {
-  $reset.classList.toggle('is-visible')
-})
+function tick () {
+  if ($limit.textContent === $time.textContent) {
+    stopTimer ()
+    window.alert("Stop!")
+  }
+}

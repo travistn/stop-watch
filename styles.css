@@ -28,19 +28,6 @@ button:hover {
   cursor: pointer;
 }
 
-.start::before {
-  content: 'Start';
-}
-
-.start.is-clicked::before {
-  content: none;
-}
-
-.start.is-clicked::after {
-  content: 'Pause';
-  background-color: white;
-}
-
 .reset {
   display: none;
   background-color: white;
@@ -68,7 +55,8 @@ div {
 .limitBox {
   width: 2rem;
   height: 2rem;
-  font-size: 20px;
+  font-size: 25px;
   color: red;
   font-weight: bold;
+  padding: 1rem;
 }
